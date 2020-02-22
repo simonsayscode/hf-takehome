@@ -1,0 +1,22 @@
+{
+  "name": "hf-takehome",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.1.0"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./src/server"
+  },
+  "author": "Simon Tam",
+  "dependencies": {
+    "apollo-server": "^2.10.1",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.6.0",
+    "graphql-iso-date": "^3.6.1",
+    "lodash": "^4.17.15",
+    "pg": "^7.18.1",
+    "sequelize": "^5.21.4"
+  }
+}
