@@ -20,7 +20,7 @@ module.exports = {
     },
 
     updateEvent: async (parent, { id, name, date }, { models }) => {
-      const event = await models.EVent.findByPk(id);
+      const event = await models.Event.findByPk(id);
 
       return event.update(_.pickBy({
         name,

@@ -18,13 +18,11 @@ module.exports = {
     },
 
     updateOrganization: async (parent, { id, name }, { models }) => {
-      return models.Organization.update(_.pickBy({
+      const organization = await models.Organization.findByPk(id);
+
+      return organization.update(_.pickBy({
         name,
-      }, _.identity), {
-        where: {
-          id,
-        },
-      });
+      }, _.identity));
     },
 
     deleteOrganization: async (parent, { id }, { models }) => {
