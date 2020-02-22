@@ -8,13 +8,17 @@ module.exports = (sequelize) => {
       autoIncrement: true,
       primaryKey: true,
     },
+    organizationId: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+    },
     name: {
       type: Sequelize.STRING,
     },
     address: {
       type: Sequelize.STRING,
     },
-    latitue: {
+    latitude: {
       type: Sequelize.FLOAT,
     },
     longitude: {

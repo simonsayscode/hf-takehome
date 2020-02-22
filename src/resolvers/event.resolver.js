@@ -11,22 +11,21 @@ module.exports = {
   },
 
   Mutation: {
-    createEvent: async (parent, { name, date }, { models }) => {
+    createEvent: async (parent, { name, date, organizationId }, { models }) => {
       return models.Event.create({
+        organizationId,
         name,
         date,
       });
     },
 
     updateEvent: async (parent, { id, name, date }, { models }) => {
-      return models.Event.update(_.pickBy({
+      const event = await models.EVent.findByPk(id);
+
+      return event.update(_.pickBy({
         name,
         date,
-      }, _.identity), {
-        where: {
-          id,
-        },
-      });
+      }, _.identity));
     },
 
     deleteEvent: async (parent, { id }, { models }) => {
