@@ -10,7 +10,7 @@
   },
   "author": "Simon Tam",
   "dependencies": {
-    "apollo-server": "^2.10.1",
+    "apollo-server": "^2.25.4",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "graphql": "^14.6.0",
